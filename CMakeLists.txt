@@ -44,11 +44,6 @@ if(TFUN_BUILD_GUI MATCHES ON OR TFUN_BUILD_DEMOGUI MATCHES ON)
     set(TFUN_BUILD_DBCLIENT             ON)
 endif()
 
-# ThermoFun currently is not setup to produce a dynamic library using MSVC, only static
-if(${CMAKE_CXX_COMPILER_ID} STREQUAL MSVC)
-    set(BUILD_SHARED_LIBS OFF)
-endif()
-
 # Set the default build type to Release
 if(NOT CMAKE_BUILD_TYPE)
     # The build type selection for the project
